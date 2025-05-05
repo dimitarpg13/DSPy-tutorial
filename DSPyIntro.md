@@ -25,6 +25,20 @@ DSPy compiler optimizes the DSPy program to improve quality and cost. The compil
 
 **Optimization in DSPy**:
 
+Modular, conducted by _teleprompters_ which are gen purpose optimization strategies that determine how the modules should learn from data. In this way, the compiler automatically maps the declarative modules to _high-quality_ compositions of prompting, finetuning, reasoning, and augmentation.
+
+## Details on DSPy Programming Model
+
+DSPy treats LMs as abstract devices for text generation, and optimizes their usage in arbitrary computation graphs. DSPy programs are expressed via Python code: each program takes the task input (e.g. a question to answer or a paper to summarize) and returns the output (e.g. an answer or a summary) after a series of steps. DSPy contributes three abstractions toward automatic optimization: 
+
+* **signatures**
+* **modules**
+* **teleprompters**
+
+Signatures abstract the input/output behavior of a module; Modules replace existing hand-prompting technqiues and can be composed in arbitrary pipelines; Teleprompters optimize all modules in the pipeline to maximize specified metric.
+
+Instead of free-form string prompts, DSPy programs use natural language _signatures_ to assign work to the LM.
+
 
 
 
