@@ -39,7 +39,15 @@ Signatures abstract the input/output behavior of a module; Modules replace exist
 
 Instead of free-form string prompts, DSPy programs use natural language _signatures_ to assign work to the LM. A DSPy signature is _natural-language typed_ declaration of a function: a short declarative spec that tells DSPy _what_ a text transformation needs to do (e.g. "consume questions and return answers"), rather than _how_ a specific LM should be prompted to implement that behavior. More formally, a DSPy signature is a tuple of _input fields_ and _output fields_ (and an optional _instruction_). A field consists of a _field name_ and optional metadata. In typical usage, the roles of fields are inferred by DSPy as a function of field names. For instance, the DSPy compiler will use in-context learning to inerpret `question` differently from `answer` and will iteratively refine its usage of these fields.
 
-Signatures offer two benefits over prompts: they can be compiled into self-improving and pipeline-adaptive prompts or finetunes. 
+Signatures offer two benefits over prompts: they can be compiled into self-improving and pipeline-adaptive prompts or finetunes. This is primarily done by _bootstrapping_ useful demo exampkles for each signature. Additionally, they handle structured formatting and parsing logic to reduce (or, ideally, avoid) brittle string manipulation in user programs.
+
+In practice, DSPy signatures can be expressed with a shorthand notation like `question -> answer`, so that line 1 in the following is a complete DSPy program for a basic question-answering system:
+
+```python
+qa = dspy.Predict("question -> answer")
+qa(question="Where is Guarani spoken?")
+# Out: Prediction(answer="Guarani is spoken mainly in South America.")
+```
 
 
 
