@@ -12,5 +12,14 @@ DSPy modules are _parametrized_, meaning theu can learn by creating and collecti
 
 **DSPy Programming model**:
 DSPy pushes building new LM pipelines away from manipulaing free-form strings and moves closer to _programming_ by composing modular operators to build text transformation graphs. In those graphs a compiler automatically generates optimized LM invocaton strategies and prompts from a program. 
+The DSPy programming model performs the following steps: 
+1) translates the string-based prompting technqiues, including complex and task-dependent ones like Chain of Thought [1] and ReAct [2] into declarative modules that carry _natural-language typed signatures_. 
+DSPy modules are task-adaptive components - akin to neural network layers - that abstract any particular text transformation, like answering a question or summarizing a paper. 
 
+
+
+## References
+
+[1] [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models, Jason Wei et al, 2023](https://github.com/dimitarpg13/DSPy-tutorial/blob/main/docs/Chain-of-Thought_Prompting_Elicits_Reasoning_in_Large_Language_Models_Wei_2022.pdf) 
+[2] [ReAct: Synergizing Reasoning and Acting in Language Models, S. Yao et al, 2023](https://github.com/dimitarpg13/DSPy-tutorial/blob/main/docs/ReAct-Synergizing_Reasoning_and_Acting_in_Language_Models_Yao_2022.pdf)
 
