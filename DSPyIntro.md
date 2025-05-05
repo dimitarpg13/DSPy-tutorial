@@ -19,6 +19,7 @@ DSPy modules are task-adaptive components - akin to neural network layers - that
 3) DSPy modules are used via expressive _define-by-run_ computational graphs (this is inspired by PyTorch abstractions)
 4) Pipelines are expressed by (i) declaring the needed modules and (ii) using these modules in any logical control flow (e.g. `if` statements, `for` loops, exceptions) to logically conect the modules
 
+**DSPy Compiler**:
 
 
 
