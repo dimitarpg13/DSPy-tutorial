@@ -54,8 +54,9 @@ In the shorthand notation, each field's name indicates the semantic role that th
 
 Parametrized and templated modules can abstract prompting techniques. Similarly to type signatures in programming languages, DSPy signatures simply define an interface and provide type-like hints on the expected behavior. To use a signature, we must declare a _module_ with that signature, like we instantiated a `Predict` module above. A module declaration like this returns a _function_ having that signature. 
 
-**The `Predict` Module
+**The `Predict` Module**
 The core module for working with signatures in DSPy is `Predict`. Internally, `Predict` stores the supplied signature, an optional LM to use (initially `None`, nut otherwise the default LM for this module), and a list of demonstrations for prompting (initially empty). 
+Like layers in PyTorch, the instantiated module behaves like a callable function: it takes in keyword arguments corresponding to the signature input fields (e.g. `question`), formats a prompt to implement the signature and includes the appropriate deomnstrations, calls the LM, and parses the output fields. When `Predict` detects it is being used in `compile` mode, it will also internally track input/output traces to assist the teleprompter at bootstrapping the demonstrations.
 
 
 ## References
