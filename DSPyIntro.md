@@ -48,8 +48,11 @@ qa = dspy.Predict("question -> answer")
 qa(question="Where is Guarani spoken?")
 # Out: Prediction(answer="Guarani is spoken mainly in South America.")
 ```
+In the shorthand notation, each field's name indicates the semantic role that the input (or output) field plays in the transmission. DSPy will parse this notation and expand the field names into meaningful instructions for the LM, so that `english_document -> french_translation` would prompt for English to French translation. When needed, DSPy can offer more advanced programming interfaces for expressing more explicit constraints on signatures.
 
+### The benefits of parametrized and templated modules
 
+Parametrized and templated modules can abstract prompting techniques.
 
 
 ## References
