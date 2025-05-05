@@ -21,5 +21,6 @@ DSPy modules are task-adaptive components - akin to neural network layers - that
 ## References
 
 [1] [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models, Jason Wei et al, 2023](https://github.com/dimitarpg13/DSPy-tutorial/blob/main/docs/Chain-of-Thought_Prompting_Elicits_Reasoning_in_Large_Language_Models_Wei_2022.pdf) 
+
 [2] [ReAct: Synergizing Reasoning and Acting in Language Models, S. Yao et al, 2023](https://github.com/dimitarpg13/DSPy-tutorial/blob/main/docs/ReAct-Synergizing_Reasoning_and_Acting_in_Language_Models_Yao_2022.pdf)
 
