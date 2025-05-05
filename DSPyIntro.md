@@ -21,6 +21,11 @@ DSPy modules are task-adaptive components - akin to neural network layers - that
 
 **DSPy Compiler**:
 
+DSPy compiler optimizes the DSPy program to improve quality and cost. The compiler inputs are the program, few training inputs with optional labels, and a validation metric. The compiler simulates versions of the program on the inputs and _bootstraps_ example traces of each module for self-improvement, using them to construct effective few-shot prompts or finetuning small LMs for steps of the pipeline.
+
+**Optimization in DSPy**:
+
+
 
 
 ## References
