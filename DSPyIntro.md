@@ -37,7 +37,9 @@ DSPy treats LMs as abstract devices for text generation, and optimizes their usa
 
 Signatures abstract the input/output behavior of a module; Modules replace existing hand-prompting technqiues and can be composed in arbitrary pipelines; Teleprompters optimize all modules in the pipeline to maximize specified metric.
 
-Instead of free-form string prompts, DSPy programs use natural language _signatures_ to assign work to the LM.
+Instead of free-form string prompts, DSPy programs use natural language _signatures_ to assign work to the LM. A DSPy signature is _natural-language typed_ declaration of a function: a short declarative spec that tells DSPy _what_ a text transformation needs to do (e.g. "consume questions and return answers"), rather than _how_ a specific LM should be prompted to implement that behavior. More formally, a DSPy signature is a tuple of _input fields_ and _output fields_ (and an optional _instruction_). A field consists of a _field name_ and optional metadata. In typical usage, the roles of fields are inferred by DSPy as a function of field names. For instance, the DSPy compiler will use in-context learning to inerpret `question` differently from `answer` and will iteratively refine its usage of these fields.
+
+Signatures offer two benefits over prompts: they can be compiled into self-improving and pipeline-adaptive prompts or finetunes. 
 
 
 
