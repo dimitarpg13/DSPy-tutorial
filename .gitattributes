@@ -1,1 +1,4 @@
 docs/Assisting_in_Writing_Wikipedia-like_Articles_From_Scratch_with_Large_Language_Models_Shao_2024.pdf filter=lfs diff=lfs merge=lfs -text
+docs/Demonstrate-Search-Predict-Composing_retrieval_and_language_models_for_knowledge-intensive_NLP_Khattab_2023.pdf filter=lfs diff=lfs merge=lfs -text
+docs/docs/Optimizing_Instructions_and_Demonstrations_for_Multi-Stage_Language_Model_Programs_Ong_2024.pdf filter=lfs diff=lfs merge=lfs -text
+docs/Optimizing_Instructions_and_Demonstrations_for_Multi-Stage_Language_Model_Programs_Ong_2024.pdf filter=lfs diff=lfs merge=lfs -text
