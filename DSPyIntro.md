@@ -12,9 +12,13 @@ DSPy modules are _parametrized_, meaning theu can learn by creating and collecti
 
 **DSPy Programming model**:
 DSPy pushes building new LM pipelines away from manipulaing free-form strings and moves closer to _programming_ by composing modular operators to build text transformation graphs. In those graphs a compiler automatically generates optimized LM invocaton strategies and prompts from a program. 
-The DSPy programming model performs the following steps: 
-1) translates the string-based prompting technqiues, including complex and task-dependent ones like Chain of Thought [1] and ReAct [2] into declarative modules that carry _natural-language typed signatures_. 
-DSPy modules are task-adaptive components - akin to neural network layers - that abstract any particular text transformation, like answering a question or summarizing a paper. 
+Implementing DSPy programming model involves the following steps: 
+1) translate the string-based prompting technqiues, including complex and task-dependent ones like Chain of Thought [1] and ReAct [2] into declarative modules that carry _natural-language typed signatures_. 
+DSPy modules are task-adaptive components - akin to neural network layers - that abstract any particular text transformation, like answering a question or summarizing a paper.
+2) parametrize each DSPy module so that it can _learn_ its desried behavior by iteratively bootstrapping useful demonstrations within the pipeline.
+3) DSPy modules are used via expressive _define-by-run_ computational graphs (this is inspired by PyTorch abstractions)
+4) Pipelines are expressed by (i) declaring the needed modules and (ii) using these modules in any logical control flow (e.g. `if` statements, `for` loops, exceptions) to logically conect the modules
+
 
 
 
