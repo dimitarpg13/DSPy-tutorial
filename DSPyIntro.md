@@ -92,7 +92,11 @@ We focus primarily on automatically generating and selecting useful demonstratio
 
 **Tools** 
 DSPy proramns may use tools which are modules that execute computation.
-DSPy supports retrieval models through a `dspy.Retrieve` module.  There are dspy.SQL for executing SQL queries and `dspy.PythonInterpreter` for executing Python code in a sandbox.
+DSPy supports retrieval models through a `dspy.Retrieve` module.  There are `dspy.SQL` for executing SQL queries and `dspy.PythonInterpreter` for executing Python code in a sandbox.
+
+**Programs**
+DSPy modules can be composed in arbitrary pipelines in a define-by-run interface. 
+
 
 ## References
 
