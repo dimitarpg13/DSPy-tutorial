@@ -95,7 +95,20 @@ DSPy proramns may use tools which are modules that execute computation.
 DSPy supports retrieval models through a `dspy.Retrieve` module.  There are `dspy.SQL` for executing SQL queries and `dspy.PythonInterpreter` for executing Python code in a sandbox.
 
 **Programs**
-DSPy modules can be composed in arbitrary pipelines in a define-by-run interface. 
+DSPy modules can be composed in arbitrary pipelines in a define-by-run interface. Inspired directly by PyTorch one first declares the modules needed at initialization, allowing DSPy to keep track of them for optimization, and then one expresses the pipeline with arbitrary code that calls the modules in a `forward` method. As a simple illustration, we offer the following simple but complete retrieval-augmented generation (RAG) system.
+
+```python
+class RAG(dspy.Module):
+   def __init__(self, num_passages=3):
+      # `Retrieve` will use user's default retrieval settings unless overridden.
+      self.retrieve = dspy.Retrieve(k=num_passages)
+      # `ChainOfThought` with signature that generates answers given retrieval & question.
+      self.generate_answer = dspy.ChainOfThought("context, question -> answer")
+
+   def forward(self, question):
+      context = self.retrieve(question).passages
+      return self.generate_answer(context=context, question=question) 
+```
 
 
 ## References
