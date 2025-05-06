@@ -59,7 +59,9 @@ The core module for working with signatures in DSPy is `Predict`. Internally, `P
 Like layers in PyTorch, the instantiated module behaves like a callable function: it takes in keyword arguments corresponding to the signature input fields (e.g. `question`), formats a prompt to implement the signature and includes the appropriate deomnstrations, calls the LM, and parses the output fields. When `Predict` detects it is being used in `compile` mode, it will also internally track input/output traces to assist the teleprompter at bootstrapping the demonstrations.
 
 **Other Built-in Modules**
-DSPy modules translate prompting techniques into modular functions that support any signature, contrasting with the standard approach of prompting LMs with task-specific details (e.g. hand-written few-shot examples).
+DSPy modules translate prompting techniques into modular functions that support any signature, contrasting with the standard approach of prompting LMs with task-specific details (e.g. hand-written few-shot examples). To this end, DSPy includes a number of more sophisticated modules like `ChainOfThought`, `ProgramOfThought`, `MultiChainComparison` and `ReAct`. These can all be used interchangeably to implement a DSPy signature. For instance, simply changing `Predict` to `ChainOfThought` in the above program leads to a system that thinks step by step before committing to its output field. 
+
+Importantly, all of these modules are implemented in a few lines of code by expanding the user-defined signature and calling `Predict` one or more times on new signatures as appropriate. 
 
 
 ## References
