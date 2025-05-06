@@ -79,7 +79,20 @@ class ChainOfThought(dspy.Module):
        return self.predict(**kwargs)
 ```
 
+This is a fuly-fledged module capable of learning effective few-shot prompting for any LM or task.
 
+**Parametrization** 
+DSPy _parametrizes_ the set of prompting tehcniques which it implements in modules. To understand this parametrization, observe that any LM call seeking to implement a particular signature needs to specify _parameters_ that include: 
+
+(1) the specific LM to call
+(2) the prompt instructions and the string prefix for each signature field
+(3) the demonstrations used as few-shot prompts (for frozen LMs) or as training data (for finetuning)
+
+We focus primarily on automatically generating and selecting useful demonstrations. In our case studies, we find that bootstrapping good demonstrations gives us a powerful way to teach sophisticated pipelines of LMs new behaviors systematically.
+
+**Tools** 
+DSPy proramns may use tools which are modules that execute computation.
+DSPy supports retrieval models through a `dspy.Retrieve` module.  There are dspy.SQL for executing SQL queries and `dspy.PythonInterpreter` for executing Python code in a sandbox.
 
 ## References
 
