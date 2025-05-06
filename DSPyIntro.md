@@ -62,6 +62,23 @@ Like layers in PyTorch, the instantiated module behaves like a callable function
 DSPy modules translate prompting techniques into modular functions that support any signature, contrasting with the standard approach of prompting LMs with task-specific details (e.g. hand-written few-shot examples). To this end, DSPy includes a number of more sophisticated modules like `ChainOfThought`, `ProgramOfThought`, `MultiChainComparison` and `ReAct`. These can all be used interchangeably to implement a DSPy signature. For instance, simply changing `Predict` to `ChainOfThought` in the above program leads to a system that thinks step by step before committing to its output field. 
 
 Importantly, all of these modules are implemented in a few lines of code by expanding the user-defined signature and calling `Predict` one or more times on new signatures as appropriate. 
+For instance, we show a simplified implementaton of the built-on `ChainOfThought` below.
+
+```python
+class ChainOfThought(dspy.Module):
+   def __init__(self, signature):
+       # modify signature from '*inputs -> *outputs' to '*inputs -> rationale, *outputs'
+       rationale_field = dspy.OutputField(prefix='Reasoning: Let's think step by step.')
+       signature = dspy.Signature(signature).prepend_output_field(rationale_field)
+
+       # declare a sub-module with the modified signature
+       self.predict = dspy.Predict(signature)
+
+   def forward(self, **kwargs):
+       # just forward the inputs to the sub-module
+       return self.predict(**kwargs)
+```
+
 
 
 ## References
