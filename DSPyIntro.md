@@ -109,6 +109,8 @@ class RAG(dspy.Module):
       context = self.retrieve(question).passages
       return self.generate_answer(context=context, question=question) 
 ```
+To highlight modularity, we use `ChainOfThought` as a drop-in replacement of the basic `Predict`. One can now simply write `RAG()("Where is Guarani spoken?")` to use it. Notice that, if we use a signature `"context, question -> search_query"`, we get a system that generates search queries rather than answers.
+
 
 
 ## References
