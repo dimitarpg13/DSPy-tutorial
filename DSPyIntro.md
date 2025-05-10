@@ -111,6 +111,10 @@ class RAG(dspy.Module):
 ```
 To highlight modularity, we use `ChainOfThought` as a drop-in replacement of the basic `Predict`. One can now simply write `RAG()("Where is Guarani spoken?")` to use it. Notice that, if we use a signature `"context, question -> search_query"`, we get a system that generates search queries rather than answers.
 
+### Teleprompters
+
+When compiling a DSPy program, we invoke a _teleprompter_, which is an optimizer that takes the program, a training set, and a metric and returns a new optmized program. Teleprompters automate prompting for arbitrary pipelines. Different teleprompters apply different strategies for optimization. 
+In DSPy, training sets may be _small_, potentially a handful of examples, though larger data enables more powerful optimization.
 
 
 ## References
