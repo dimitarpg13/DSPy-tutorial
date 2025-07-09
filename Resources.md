@@ -8,11 +8,11 @@
 
 [Demonstrate-Search-Predict: Composing retrieval and language models for knowldege-intensive NLP, Omar Khattab et al, 2024](https://github.com/dimitarpg13/DSPy-tutorial/blob/main/docs/Demonstrate-Search-Predict-Composing_retrieval_and_language_models_for_knowledge-intensive_NLP_Khattab_2023.pdf)
 
-[DSPy 3.0 — and DSPy at Databricks, youtube video, Omar Khattab, Databricks, 2025](https://youtu.be/grIuzesOwwU?si=XEcXmSZypJVPCXko)
+[DSPy 3.0 — and DSPy at Databricks, Omar Khattab, Databricks, 2025 (youtube video)](https://youtu.be/grIuzesOwwU?si=XEcXmSZypJVPCXko)
 
-[Learn to Program Not Write Prompts with DSPy, youtube video, Austin Choi, Delivery Solutions Architect, Databricks, 2025](https://youtu.be/tCiQLSCXrwA?si=dQr7bSCfN-wY3Krl)
+[Learn to Program Not Write Prompts with DSPy, Austin Choi, Delivery Solutions Architect, Databricks, 2025 (youtube video)](https://youtu.be/tCiQLSCXrwA?si=dQr7bSCfN-wY3Krl)
 
-[Let the LLM Write the Prompts: An Intro to DSPy in Compound AI Pipelines, youtube video, Drew Breunig, Data Science Leader & Strategist, Overture Maps Foundation, 2025](https://youtu.be/I9ZtkgYZnOw?si=uhGf6GUh3bbGydYR)
+[Let the LLM Write the Prompts: An Intro to DSPy in Compound AI Pipelines, Drew Breunig, Data Science Leader & Strategist, Overture Maps Foundation, 2025 (youtube video)](https://youtu.be/I9ZtkgYZnOw?si=uhGf6GUh3bbGydYR)
 
 [Fine-tuning and Prompt Optimization: Two Great Steps that Work Better Together, D. Soylu et al, 2024 ](https://github.com/dimitarpg13/DSPy-tutorial/blob/main/docs/Fine-Tuning_and_Prompt_Optimization-Two_Great_Steps_that_Work_Better_Together_Soylu_2024.pdf)
 
