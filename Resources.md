@@ -18,3 +18,4 @@
 
 [In-Context Learning for Extreme Multi-Label Classification, Karel D'Oosterlink et al, 2024](https://github.com/dimitarpg13/DSPy-tutorial/blob/main/docs/In-Context_Learning_for_Extreme_Multi-Label_Classification_DOosterlinck_2024.pdf)
 
+[A Survey of Context Engineering for Large Language Models, L. Mei et al, 2025](https://github.com/dimitarpg13/DSPy-tutorial/blob/main/docs/A_Survey_of_Context_Engineering_for_Large_Language_Models_Mei_2025.pdf)
