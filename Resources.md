@@ -36,3 +36,5 @@
 
 [The Magic of DSPy 3 (Stanford), Discover AI, Jul 16, 2025 (youtube video)](https://youtu.be/1067jj67toY?si=ahl6VPeHUSpvL_Tg)
 
+[The end of RL: GEPA - LLM based on Genetic Algorithms, Discover AI, Jul 28, 2025 (youtube video)](https://www.youtube.com/watch?v=o6RbVPFOslg)
+
